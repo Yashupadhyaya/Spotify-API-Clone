@@ -41,6 +41,13 @@
       <version>0.0.40</version>
       <!--Dependency added by RoostGPT-->
     </dependency>
+    <dependency>
+      <groupId>org.neo4j.driver</groupId>
+      <artifactId>neo4j-java-driver-spring-boot-starter</artifactId>
+      <version>4.2.4.0</version>
+      <scope>runtime</scope>
+      <!--Dependency added by RoostGPT-->
+    </dependency>
     <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
     <dependency>
       <groupId>com.squareup.okhttp3</groupId>

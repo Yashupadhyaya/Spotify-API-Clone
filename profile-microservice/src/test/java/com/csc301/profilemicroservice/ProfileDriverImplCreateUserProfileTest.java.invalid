@@ -52,70 +52,85 @@ Validation:
 // ********RoostGPT********
 
 package com.csc301.profilemicroservice;
-import java.util.Map;
-import java.util.HashMap;
-import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.mock;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.MockitoAnnotations;
 import org.neo4j.driver.v1.Driver;
 import org.neo4j.driver.v1.Session;
 import org.neo4j.driver.v1.Transaction;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.when;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import com.csc301.profilemicroservice.DbQueryExecResult;
+import com.csc301.profilemicroservice.DbQueryStatus;
+import com.csc301.profilemicroservice.ProfileDriverImpl;
 import org.junit.jupiter.api.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import org.neo4j.driver.v1.Record;
 import org.neo4j.driver.v1.StatementResult;
 import org.springframework.stereotype.Repository;
 
-@ExtendWith(MockitoExtension.class)
 public class ProfileDriverImplCreateUserProfileTest {
+    @InjectMocks
+    private ProfileDriverImpl pfd;
     @Mock
     private Driver driver;
     @Mock
     private Session session;
     @Mock
     private Transaction transaction;
-    @InjectMocks
-    ProfileDriverImpl profileDriver;
-    private Map<String, Object> params;
-    @BeforeEach
-    public void setup() {
-        params = new HashMap<>();
-        params.put("userName", "testUser");
-        params.put("fullName", "User Test");
-        params.put("password", "pass123");
-        params.put("plName", "testUser-favourites");
+    public ProfileDriverImplCreateUserProfileTest() {
+        MockitoAnnotations.initMocks(this);
     }
-    @Test
     @Tag("valid")
+    @Test
     public void testForAllValidParameters() {
+        // Arrange
+        String userName = "testUser";
+        String fullName = "Test User";
+        String password = "password";
         when(driver.session()).thenReturn(session);
-        when(session.writeTransaction(any())).thenReturn(null);
-        DbQueryStatus result = profileDriver.createUserProfile("testUser", "User Test", "pass123");
+        when(session.writeTransaction((Function<Transaction,Void>) org.mockito.ArgumentMatchers.any())).thenReturn(null);
+        // Act
+        DbQueryStatus result = pfd.createUserProfile(userName, fullName, password);
+        // Assert
         assertEquals("POST", result.getMessage());
         assertEquals(DbQueryExecResult.QUERY_OK, result.getdbQueryExecResult());
     }
-    @Test
     @Tag("invalid")
-    public void testForNullParameters() {
-        DbQueryStatus result = profileDriver.createUserProfile(null, null, null);
-        assertEquals("POST", result.getMessage());
-        assertEquals(DbQueryExecResult.QUERY_ERROR_GENERIC, result.getdbQueryExecResult());
-    }
     @Test
-    @Tag("integration")
+    public void testForNullParameters() {
+        // Act
+        DbQueryStatus nullUser = pfd.createUserProfile(null, "Test", "Password");
+        DbQueryStatus nullFull = pfd.createUserProfile("test", null, "Password");
+        DbQueryStatus nullPass = pfd.createUserProfile("test", "Test", null);
+        // Assert
+        assertEquals("POST", nullUser.getMessage());
+        assertEquals(DbQueryExecResult.QUERY_ERROR_GENERIC, nullUser.getdbQueryExecResult());
+        assertEquals("POST", nullFull.getMessage());
+        assertEquals(DbQueryExecResult.QUERY_ERROR_GENERIC, nullFull.getdbQueryExecResult());
+        assertEquals("POST", nullPass.getMessage());
+        assertEquals(DbQueryExecResult.QUERY_ERROR_GENERIC, nullPass.getdbQueryExecResult());
+    }
+    @Tag("invalid")
+    @Test
     public void testForDatabaseError() {
+        // Arrange
+        String userName = "testUser";
+        String fullName = "Test User";
+        String password = "password";
         when(driver.session()).thenReturn(session);
-        when(session.writeTransaction(any())).thenThrow(new RuntimeException("Database Error"));
-        DbQueryStatus result = profileDriver.createUserProfile("testUser", "User Test", "pass123");
+        when(session.writeTransaction((Function<Transaction,Void>) org.mockito.ArgumentMatchers.any())).thenThrow(RuntimeException.class);
+        // Act
+        DbQueryStatus result = pfd.createUserProfile(userName, fullName, password);
+        // Assert
         assertEquals("POST", result.getMessage());
         assertEquals(DbQueryExecResult.QUERY_ERROR_GENERIC, result.getdbQueryExecResult());
     }
