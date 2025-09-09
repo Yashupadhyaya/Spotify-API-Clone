@@ -1,5 +1,3 @@
-//This test file is marked invalid as it contains compilation errors. Change the extension to of this file to .java, to manually edit its contents
-
 
 // ********RoostGPT********
 /*
@@ -119,22 +117,21 @@ Execution:
 Validation:  
   This test ensures that the method can handle and serialize large numbers properly, maintaining precision and avoiding overflow or truncation in the JSON representation.  
 
+
+roost_feedback [09/09/2025, 9:23:56 AM]:remove\sthe\simport\sstatement\s\n```\nimport\sorg.junit.jupiter.api.Tag;\nimport\sorg.junit.jupiter.api.Test;\n```
 */
 
 // ********RoostGPT********
 
 package com.csc301.songmicroservice;
+
 import java.util.HashMap;
 import java.util.Map;
 import org.bson.types.ObjectId;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import org.junit.jupiter.api.*;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class SongGetJsonRepresentationTest {
     public static class Song {
@@ -144,15 +141,18 @@ public class SongGetJsonRepresentationTest {
         private String songArtistFullName;
         private String songAlbum;
         private long songAmountFavourites;
+
         public Song(String songName, String songArtistFullName, String songAlbum) {
             this.songName = songName;
             this.songArtistFullName = songArtistFullName;
             this.songAlbum = songAlbum;
             this.songAmountFavourites = 0; // Default value
         }
+
         public String getId() {
             return id != null ? id.toHexString() : null;
         }
+
         public Map<String, String> getJsonRepresentation() {
             HashMap<String, String> jsonRepresentation = new HashMap<>();
             jsonRepresentation.put("id", this.getId());
@@ -163,13 +163,13 @@ public class SongGetJsonRepresentationTest {
             return jsonRepresentation;
         }
     }
+
     @Test
-    @Tag("valid")
     public void generateJsonMapWithValidFieldValues() {
-        ObjectId id = new ObjectId(); // TODO: Use a generated ObjectId
+        ObjectId id = new ObjectId();
         Song song = new Song("TestSong", "TestArtist", "TestAlbum");
-        song.id = id; // Setting the ID
-        song.songAmountFavourites = 123; // Assign valid number of favourites
+        song.id = id; 
+        song.songAmountFavourites = 123;
         Map<String, String> actualJson = song.getJsonRepresentation();
         assertEquals(id.toHexString(), actualJson.get("id"));
         assertEquals("TestSong", actualJson.get("songName"));
@@ -177,12 +177,12 @@ public class SongGetJsonRepresentationTest {
         assertEquals("TestAlbum", actualJson.get("songAlbum"));
         assertEquals("123", actualJson.get("songAmountFavourites"));
     }
+
     @Test
-    @Tag("invalid")
     public void generateJsonMapWithNullFieldValues() {
         Song song = new Song(null, null, null);
         song.id = null;
-        song.songAmountFavourites = 0; // Default value
+        song.songAmountFavourites = 0;
         Map<String, String> actualJson = song.getJsonRepresentation();
         assertEquals(null, actualJson.get("id"));
         assertEquals(null, actualJson.get("songName"));
@@ -190,30 +190,30 @@ public class SongGetJsonRepresentationTest {
         assertEquals(null, actualJson.get("songAlbum"));
         assertEquals("0", actualJson.get("songAmountFavourites"));
     }
+
     @Test
-    @Tag("valid")
     public void ensureIdIsIncludedInJsonMap() {
-        ObjectId id = new ObjectId(); // TODO: Generate valid ObjectId
+        ObjectId id = new ObjectId();
         Song song = new Song("SomeSong", "SomeArtist", "SomeAlbum");
         song.id = id;
         Map<String, String> actualJson = song.getJsonRepresentation();
         assertEquals(id.toHexString(), actualJson.get("id"));
     }
+
     @Test
-    @Tag("boundary")
     public void convertNumericFieldToStringInJsonMap() {
         Song song = new Song("BoundarySong", "BoundaryArtist", "BoundaryAlbum");
         song.id = new ObjectId();
-        song.songAmountFavourites = 999; // Assign boundary value
+        song.songAmountFavourites = 999;
         Map<String, String> actualJson = song.getJsonRepresentation();
         assertEquals("999", actualJson.get("songAmountFavourites"));
     }
+
     @Test
-    @Tag("invalid")
     public void generateJsonMapWithNullInstanceFields() {
         Song song = new Song(null, null, null);
         song.id = null;
-        song.songAmountFavourites = 0; // Default value
+        song.songAmountFavourites = 0;
         Map<String, String> actualJson = song.getJsonRepresentation();
         assertEquals(null, actualJson.get("id"));
         assertEquals(null, actualJson.get("songName"));
@@ -221,12 +221,12 @@ public class SongGetJsonRepresentationTest {
         assertEquals(null, actualJson.get("songAlbum"));
         assertEquals("0", actualJson.get("songAmountFavourites"));
     }
+
     @Test
-    @Tag("boundary")
     public void ensureKeysExistEvenWithEmptySongFields() {
         Song song = new Song("", "", "");
         song.id = new ObjectId();
-        song.songAmountFavourites = 0; // Default value
+        song.songAmountFavourites = 0;
         Map<String, String> actualJson = song.getJsonRepresentation();
         assertNotNull(actualJson.get("id"));
         assertNotNull(actualJson.get("songName"));
@@ -234,12 +234,12 @@ public class SongGetJsonRepresentationTest {
         assertNotNull(actualJson.get("songAlbum"));
         assertNotNull(actualJson.get("songAmountFavourites"));
     }
+
     @Test
-    @Tag("boundary")
     public void handleLargeNumericValuesInJsonRepresentation() {
         Song song = new Song("LargeSong", "LargeArtist", "LargeAlbum");
         song.id = new ObjectId();
-        song.songAmountFavourites = Long.MAX_VALUE; // Assign max long value
+        song.songAmountFavourites = Long.MAX_VALUE;
         Map<String, String> actualJson = song.getJsonRepresentation();
         assertEquals(String.valueOf(Long.MAX_VALUE), actualJson.get("songAmountFavourites"));
     }
