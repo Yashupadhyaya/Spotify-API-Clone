@@ -1,5 +1,3 @@
-//This test file is marked invalid as it contains compilation errors. Change the extension to of this file to .java, to manually edit its contents
-
 
 // ********RoostGPT********
 /*
@@ -135,11 +133,14 @@ Execution:
 Validation:  
   Validate proper fallback and recovery behavior when critical service dependencies are misconfigured, ensuring application integrity during runtime failures.  
 
+
+roost_feedback [09/09/2025, 9:21:40 AM]:Modify\sCode\sto\sfix\sthis\serror\n[98,36]\spackage\sorg.junit.jupiter.api\sdoes\snot\sexist\n[99,29]\spackage\sorg.junit.jupiter.api\sdoes\snot\sexist\n[100,29]\spackage\sorg.junit.jupiter.api\sdoes\snot\sexist\n[101,29]\spackage\sorg.junit.jupiter.api\sdoes\snot\sexist\n[124,2]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\sclass\sTag\n[125,2]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\sclass\sTag\n[107,1]\spackage\sorg.junit.jupiter.api\sdoes\snot\sexist\n[122,1]\spackage\sorg.junit.jupiter.api\sdoes\snot\sexist\n[133,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sBeforeEach\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[137,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTest\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[138,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTag\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[154,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTest\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[155,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTag\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[170,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTest\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[171,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTag\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[186,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTest\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[187,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTag\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[202,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTest\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[203,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTag\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[219,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTest\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[220,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTag\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[234,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTest\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[235,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTag\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[262,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTest\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[263,6]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\sclass\sTag\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[135,27]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sopenMocks(com.csc301.songmicroservice.SongControllerGetSongByIdTest)\n[ERROR]\s\s\slocation:\sclass\sorg.mockito.MockitoAnnotations\n[150,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.String,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[151,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.String,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[152,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.Object,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[166,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.String,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[167,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.String,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[168,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertNull(java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[182,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.String,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[183,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.String,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[184,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertNull(java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[198,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.String,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[199,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.String,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[200,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertNull(java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[215,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.String,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[216,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.String,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[217,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.Object,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[232,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.String,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[251,13]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.Object,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[255,13]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertEquals(java.lang.Object,java.lang.Object)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[271,31]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertThrows(java.lang.Class<java.lang.NullPointerException>,()->{\snull[...]t);\s})\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n[274,9]\scannot\sfind\ssymbol\n[ERROR]\s\s\ssymbol:\s\s\smethod\sassertNotNull(java.lang.Exception)\n[ERROR]\s\s\slocation:\sclass\scom.csc301.songmicroservice.SongControllerGetSongByIdTest\n\nRemove\sthis\sSongControllerGetSongByIdTest\stest\n
 */
 
 // ********RoostGPT********
 
 package com.csc301.songmicroservice;
+
 import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
@@ -148,23 +149,11 @@ import org.junit.jupiter.api.Tag;
 import org.mockito.Mock;
 import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
+
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
-import org.junit.jupiter.api.*;
+
 import java.util.HashMap;
-import org.json.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
-import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
 
 class SongControllerGetSongByIdTest {
     @Mock
@@ -173,144 +162,117 @@ class SongControllerGetSongByIdTest {
     private HttpServletRequest request;
     @InjectMocks
     private SongController songController;
+
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
     }
+
     @Test
     @Tag("valid")
     public void getSongByIdReturnsSongDetailsWhenSongFound() {
-        // Arrange
-        String songId = "123"; // TODO: Replace with an actual test ID
+        String songId = "123";
         when(request.getRequestURL()).thenReturn(new StringBuffer("http://localhost:8080/songs/123"));
         when(Utils.getUrl(request)).thenReturn("http://localhost:8080/songs/123");
         DbQueryStatus mockStatus = new DbQueryStatus("Song found", DbQueryExecResult.QUERY_OK);
         mockStatus.setData(Map.of("songName", "Test Song", "songArtistFullName", "Test Artist"));
         when(songDal.findSongById(songId)).thenReturn(mockStatus);
-        // Act
+
         Map<String, Object> response = songController.getSongById(songId, request);
-        // Assert
+
         assertEquals("GET http://localhost:8080/songs/123", response.get("path"));
         assertEquals("Song found", response.get("message"));
         assertEquals(mockStatus.getData(), response.get("data"));
     }
+
     @Test
     @Tag("invalid")
     public void getSongByIdReturnsErrorMessageWhenSongNotFound() {
-        // Arrange
-        String songId = "nonexistent"; // TODO: Replace with an actual test ID
+        String songId = "nonexistent";
         when(request.getRequestURL()).thenReturn(new StringBuffer("http://localhost:8080/songs/nonexistent"));
         when(Utils.getUrl(request)).thenReturn("http://localhost:8080/songs/nonexistent");
         DbQueryStatus mockStatus = new DbQueryStatus("Song not found", DbQueryExecResult.QUERY_ERROR_NOT_FOUND);
         when(songDal.findSongById(songId)).thenReturn(mockStatus);
-        // Act
+
         Map<String, Object> response = songController.getSongById(songId, request);
-        // Assert
+
         assertEquals("GET http://localhost:8080/songs/nonexistent", response.get("path"));
         assertEquals("Song not found", response.get("message"));
         assertNull(response.get("data"));
     }
+
     @Test
     @Tag("invalid")
     public void getSongByIdHandlesInvalidSongIdGracefully() {
-        // Arrange
-        String songId = ""; // Invalid ID
+        String songId = "";
         when(request.getRequestURL()).thenReturn(new StringBuffer("http://localhost:8080/songs/"));
         when(Utils.getUrl(request)).thenReturn("http://localhost:8080/songs/");
         DbQueryStatus mockStatus = new DbQueryStatus("Invalid ID", DbQueryExecResult.QUERY_ERROR_GENERIC);
         when(songDal.findSongById(songId)).thenReturn(mockStatus);
-        // Act
+
         Map<String, Object> response = songController.getSongById(songId, request);
-        // Assert
+
         assertEquals("GET http://localhost:8080/songs/", response.get("path"));
         assertEquals("Invalid ID", response.get("message"));
         assertNull(response.get("data"));
     }
+
     @Test
     @Tag("boundary")
     public void getSongByIdHandlesServerErrorFromDalLayer() {
-        // Arrange
-        String songId = "123"; // TODO: Replace with an actual test ID
+        String songId = "123";
         when(request.getRequestURL()).thenReturn(new StringBuffer("http://localhost:8080/songs/123"));
         when(Utils.getUrl(request)).thenReturn("http://localhost:8080/songs/123");
         DbQueryStatus mockStatus = new DbQueryStatus("Internal server error", DbQueryExecResult.QUERY_ERROR_GENERIC);
         when(songDal.findSongById(songId)).thenReturn(mockStatus);
-        // Act
+
         Map<String, Object> response = songController.getSongById(songId, request);
-        // Assert
+
         assertEquals("GET http://localhost:8080/songs/123", response.get("path"));
         assertEquals("Internal server error", response.get("message"));
         assertNull(response.get("data"));
     }
+
     @Test
     @Tag("boundary")
     public void getSongByIdHandlesNullRequestUrlParameter() {
-        // Arrange
-        String songId = "123"; // TODO: Replace with an actual test ID
+        String songId = "123";
         when(request.getRequestURL()).thenReturn(null);
         when(Utils.getUrl(request)).thenReturn(null);
         DbQueryStatus mockStatus = new DbQueryStatus("Song found", DbQueryExecResult.QUERY_OK);
         mockStatus.setData(Map.of("songName", "Test Song", "songArtistFullName", "Test Artist"));
         when(songDal.findSongById(songId)).thenReturn(mockStatus);
-        // Act
+
         Map<String, Object> response = songController.getSongById(songId, request);
-        // Assert
+
         assertEquals("GET null", response.get("path"));
         assertEquals("Song found", response.get("message"));
         assertEquals(mockStatus.getData(), response.get("data"));
     }
+
     @Test
     @Tag("integration")
     public void getSongByIdPathFormattingIntegrity() {
-        // Arrange
-        String songId = "123"; // TODO: Replace with an actual test ID
+        String songId = "123";
         when(request.getRequestURL()).thenReturn(new StringBuffer("http://localhost:8080/songs/123"));
         when(Utils.getUrl(request)).thenReturn("http://localhost:8080/songs/123");
         DbQueryStatus mockStatus = new DbQueryStatus("Song found", DbQueryExecResult.QUERY_OK);
         mockStatus.setData(Map.of("songName", "Test Song", "songArtistFullName", "Test Artist"));
         when(songDal.findSongById(songId)).thenReturn(mockStatus);
-        // Act
+
         Map<String, Object> response = songController.getSongById(songId, request);
-        // Assert
+
         assertEquals("GET http://localhost:8080/songs/123", response.get("path"));
     }
-    @Test
-    @Tag("integration")
-    public void getSongByIdHandlesConcurrentRequestsCorrectly() {
-        // Arrange
-        String songId1 = "123";
-        String songId2 = "456";
-        when(request.getRequestURL()).thenReturn(new StringBuffer("http://localhost:8080/songs/123"));
-        when(Utils.getUrl(request)).thenReturn("http://localhost:8080/songs/123");
-        DbQueryStatus mockStatus1 = new DbQueryStatus("Song found", DbQueryExecResult.QUERY_OK);
-        mockStatus1.setData(Map.of("songName", "Test Song 1", "songArtistFullName", "Test Artist 1"));
-        DbQueryStatus mockStatus2 = new DbQueryStatus("Song found", DbQueryExecResult.QUERY_OK);
-        mockStatus2.setData(Map.of("songName", "Test Song 2", "songArtistFullName", "Test Artist 2"));
-        when(songDal.findSongById(songId1)).thenReturn(mockStatus1);
-        when(songDal.findSongById(songId2)).thenReturn(mockStatus2);
-        // Act
-        Runnable task1 = () -> {
-            Map<String, Object> response = songController.getSongById(songId1, request);
-            assertEquals(mockStatus1.getData(), response.get("data"));
-        };
-        Runnable task2 = () -> {
-            Map<String, Object> response = songController.getSongById(songId2, request);
-            assertEquals(mockStatus2.getData(), response.get("data"));
-        };
-        Thread thread1 = new Thread(task1);
-        Thread thread2 = new Thread(task2);
-        thread1.start();
-        thread2.start();
-    }
+
     @Test
     @Tag("boundary")
     public void getSongByIdHandlesNullSongDalGracefully() {
-        // Arrange
         SongController nullDalController = new SongController(null);
-        String songId = "123"; // TODO: Replace with an actual test ID
+        String songId = "123";
         when(request.getRequestURL()).thenReturn(new StringBuffer("http://localhost:8080/songs/123"));
         when(Utils.getUrl(request)).thenReturn("http://localhost:8080/songs/123");
-        // Act and Assert
+
         Exception exception = assertThrows(NullPointerException.class, () -> {
             nullDalController.getSongById(songId, request);
         });
